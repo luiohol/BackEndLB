@@ -52,8 +52,8 @@ public class AuthController {
     JwtProvider jwtProvider;
     
     @PostMapping("/nuevo")
-    @CrossOrigin(origins = "http://localhost:4200")
-    //@CrossOrigin(origins = "https://frontendlb-c1e7e.web.app")
+
+    @CrossOrigin(origins = "https://portafolio-b3e2b.web.app")
     public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult){
         if(bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos mal puestos o email invalido"),HttpStatus.BAD_REQUEST);
